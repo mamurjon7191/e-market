@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-family: sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  padding: 1.5rem;
+  background-color: black;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.header a {
+  font-size: 1.4rem;
+}
+.header h1 {
   color: white;
+  margin-bottom: 0rem;
+  padding-top: 0.5rem;
+  margin-right: 15rem;
 }
-
-.App-link {
-  color: #61dafb;
+.home {
+  background-image: url("../public/img/fashion-model-4k-9k-1366x768.jpg");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.home h1 {
+  font-size: 2.5rem;
+}
+.home p {
+  font-size: 1.8rem;
+}
+.home-left {
+  margin-top: 10%;
+  animation: identifier 1.5s;
+  cursor: pointer;
+}
+.home-right {
+  cursor: pointer;
+  margin-top: 30%;
+  animation: identifier1 1.5s;
+}
+@keyframes identifier {
+  0% {
+    transform: translate(-90%);
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+@keyframes identifier1 {
+  0% {
+    transform: translate(90%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
   }
 }
