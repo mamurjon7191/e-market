@@ -23,7 +23,7 @@ html {
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 98vh;
   display: flex;
   justify-content: space-between;
   padding: 1rem;
@@ -40,10 +40,32 @@ html {
   animation: identifier 1.5s;
   cursor: pointer;
 }
+.home-left:hover {
+  transform: rotate(5deg);
+  transition: 1s all;
+}
+.home-right:hover {
+  transform: rotate(-5deg);
+  transition: 1s all;
+}
 .home-right {
   cursor: pointer;
   margin-top: 30%;
   animation: identifier1 1.5s;
+}
+.main-title {
+  text-align: center;
+  padding: 2rem;
+}
+.main-title h1 {
+  font-family: monospace;
+  font-size: 3rem;
+}
+.main-title hr {
+  width: 50%;
+  transform: translate(50%);
+  height: 0.3rem;
+  background-color: beige;
 }
 @keyframes identifier {
   0% {
