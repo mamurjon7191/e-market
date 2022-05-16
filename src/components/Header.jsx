@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import { connect } from "react-redux";
 
-const Header = function () {
+const Header = function (props) {
+  console.log(props);
   return (
     <div className="header">
       <div className="ui large secondary inverted pointing menu">
@@ -23,17 +25,17 @@ const Header = function () {
           Contact
         </NavLink>
         <div className="right item" style={{ gap: "2rem" }}>
-          <NavLink className="ui inverted button" to="#1">
+          <NavLink className="ui inverted button hover" to="/login">
             <i className="sign-in icon"></i>
             Log in
           </NavLink>
-          <NavLink className="ui inverted button" to="#1">
+          <NavLink className="ui inverted button hover" to="/signUp">
             <i className="share square icon"></i>
             Sign Up
           </NavLink>
-          <NavLink className="ui inverted button" to="#1">
+          <NavLink className="ui inverted button hover" to="/cart">
             <i className="shopping cart icon"></i>
-            Cart ( 0 ){" "}
+            Cart ({props.addCartReducer.length})
           </NavLink>
         </div>
       </div>
@@ -41,4 +43,10 @@ const Header = function () {
   );
 };
 
-export default Header;
+const getMyState = function (state) {
+  return state;
+};
+
+export default connect(getMyState, {})(Header);
+
+// export default Header;

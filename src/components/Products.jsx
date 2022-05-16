@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+import { NavLink } from "react-router-dom";
 
 const Products = function () {
   const [data, setData] = useState([]);
@@ -17,8 +19,22 @@ const Products = function () {
   }, []);
   const Loading = function () {
     return (
-      <div>
-        <div className="ui active centered inline loader"></div>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr 1fr 1fr",
+          padding: "3rem",
+          gap: "2rem",
+        }}
+      >
+        <Skeleton height={340} />
+        <Skeleton height={340} />
+        <Skeleton height={340} />
+        <Skeleton height={340} />
+        <Skeleton height={340} />
+        <Skeleton height={340} />
+        <Skeleton height={340} />
+        <Skeleton height={340} />
       </div>
     );
   };
@@ -44,10 +60,12 @@ const Products = function () {
                 tabindex="0"
                 style={{ width: "50%" }}
               >
-                <div className="hidden content">Buy Now</div>
-                <div className="visible content">
-                  <i className="shop icon"></i>
-                </div>
+                <NavLink to={`/products/:${val.id}`}>
+                  <div className="hidden content">Buy Now</div>
+                  <div className="visible content">
+                    <i className="shop icon"></i>
+                  </div>
+                </NavLink>
               </div>
             </div>
           </div>
@@ -61,7 +79,6 @@ const Products = function () {
     });
     setFilter(obj);
   };
-  console.log(data);
   const Categories = function () {
     return (
       <div
