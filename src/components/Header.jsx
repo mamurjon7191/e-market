@@ -1,35 +1,40 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Header = function () {
   return (
     <div className="header">
-      <div class="ui large secondary inverted pointing menu">
-        <h1>La Collection</h1>
-        <a class="item" href="#1">
+      <div className="ui large secondary inverted pointing menu">
+        <h1>
+          <NavLink to="/" className="item" style={{ fontSize: "1.5rem" }}>
+            La Collection
+          </NavLink>
+        </h1>
+        <NavLink className="item" to="/">
           Home
-        </a>
-        <a class="item" href="#1">
-          Work
-        </a>
-        <a class="item" href="#1">
-          Company
-        </a>
-        <a class="item" href="#1">
-          Careers
-        </a>
-        <div class="right item" style={{ gap: "2rem" }}>
-          <a class="ui inverted button" href="#1">
-            <i class="sign-in icon"></i>
+        </NavLink>
+        <NavLink className="item" to="/products">
+          Products
+        </NavLink>
+        <NavLink className="item" to="/about">
+          About
+        </NavLink>
+        <NavLink className="item" to="/contact">
+          Contact
+        </NavLink>
+        <div className="right item" style={{ gap: "2rem" }}>
+          <NavLink className="ui inverted button" to="#1">
+            <i className="sign-in icon"></i>
             Log in
-          </a>
-          <a class="ui inverted button" href="#1">
-            <i class="share square icon"></i>
+          </NavLink>
+          <NavLink className="ui inverted button" to="#1">
+            <i className="share square icon"></i>
             Sign Up
-          </a>
-          <a class="ui inverted button" href="#1">
-            <i class="shopping cart icon"></i>
+          </NavLink>
+          <NavLink className="ui inverted button" to="#1">
+            <i className="shopping cart icon"></i>
             Cart ( 0 ){" "}
-          </a>
+          </NavLink>
         </div>
       </div>
     </div>
