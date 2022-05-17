@@ -13,3 +13,18 @@ export const deleteCartAction = function (obj, info) {
     info: info,
   };
 };
+// sanashga kerak
+export const needForCountingAction = function (obj) {
+  return {
+    type: "Count",
+    payload: obj,
+  };
+};
+
+export const deleteCountAction = function (obj, info) {
+  return {
+    type: "DeleteCount",
+    payload: obj,
+    info: info,
+  };
+};
