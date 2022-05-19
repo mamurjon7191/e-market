@@ -53,7 +53,6 @@ const Cart = function (props) {
                 style={{ display: "flex", gap: "0.5rem", marginTop: "2rem" }}
               >
                 <div>
-                  <h1></h1>
                   <i
                     onClick={() => {
                       deleting(val);

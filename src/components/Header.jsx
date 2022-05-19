@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 
 const Header = function (props) {
+  console.log(props);
   return (
     <div className="header">
       <div className="ui large secondary inverted pointing menu">

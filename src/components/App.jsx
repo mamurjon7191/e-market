@@ -7,7 +7,7 @@ import Cart from "./Cart";
 
 import { Routes, Route } from "react-router-dom";
 
-const App = function () {
+const App = function (props) {
   return (
     <div>
       <Header />

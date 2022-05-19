@@ -17,7 +17,7 @@ import allReducers from "./redux/reducers/index";
 
 ReactDOM.render(
   <BrowserRouter>
-    <Provider store={createStore(allReducers)}>
+    <Provider store={createStore(allReducers)} mamur="helo">
       <App />
     </Provider>
   </BrowserRouter>,
